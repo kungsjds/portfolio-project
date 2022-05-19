@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   
 }
 
 /* 
@@ -22,6 +22,7 @@ header {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    color: #FFF;
 }
 .header--menu {
     display: flex;
@@ -47,26 +48,25 @@ MAIN SECTION START
 .main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
 }
 .main--left {
     display: flex;
     align-items: center;
     background-color: #3B576D;
-    height: 100vh;
 }
 .info--area {
     padding: 0 50px;
     color: #FFF;
 }
 .info--area-profession {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
 }
 .info--area-name {
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 30px;
 }
 .info--area-buttons a {
@@ -80,15 +80,27 @@ MAIN SECTION START
     background-color: #FFF;
     transition: 350ms;
     border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #171717;
+    margin-right: 10px;
+}
+.info--area-buttons a:nth-child(2) {
+    color: #FFF;
+    background-color: #3B576D;    
 }
 .info--area-buttons a:hover {
     color: #FFF;
     background-color: #3B576D;
     border: 1px solid #FFF;
+    box-shadow: 5px 10px 20px #171717;
+}
+.info--area-buttons a:nth-child(2):hover {
+    color: #3B576D;
+    background-color: #FFF;    
+    border: 1px solid #3B576D;
 }
 
 .main--right {
-    height: 100vh;    
     background-image: url(../images/hero.jpg);
     background-size: cover;
     background-position: top;
@@ -96,3 +108,62 @@ MAIN SECTION START
 /* 
 MAIN SECTION END
 */
+
+/* 
+FOOTER START
+*/
+footer {
+    position: fixed;
+    color: #FFF;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 30px 50px;
+    font-size: 13px;
+}
+footer a {
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 0px 0px 7px #000;
+}
+/* 
+FOOTER END
+*/
+
+@media (max-width: 767px) {
+
+    header {
+        padding: 15px 10px;
+        background-color: #171717;
+    }
+
+    .header--menu-line {
+        background-color: #FFF;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .info--area {
+        padding: 0 10px;
+    }
+
+    .info--area-profession {
+        font-size: 15px;
+    }
+
+    .info--area-name {
+        font-size: 30px;
+    }
+    
+    .info--area-buttons a {
+        text-align: center;
+        padding: 15px 25px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+}
