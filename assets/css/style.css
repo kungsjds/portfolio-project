@@ -2,4 +2,97 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 
+HEADER START
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header--logo {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.header--menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+.header--menu-line {
+    height: 3px;
+    background-color: #000;
+}
+/* 
+HEADER END
+*/
+
+
+
+/* 
+MAIN SECTION START
+*/
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.main--left {
+    display: flex;
+    align-items: center;
+    background-color: #3B576D;
+    height: 100vh;
+}
+.info--area {
+    padding: 0 50px;
+    color: #FFF;
+}
+.info--area-profession {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.info--area-name {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.info--area-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: #3B576D;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    background-color: #FFF;
+    transition: 350ms;
+    border: 1px solid transparent;
+}
+.info--area-buttons a:hover {
+    color: #FFF;
+    background-color: #3B576D;
+    border: 1px solid #FFF;
+}
+
+.main--right {
+    height: 100vh;    
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+}
+/* 
+MAIN SECTION END
+*/
